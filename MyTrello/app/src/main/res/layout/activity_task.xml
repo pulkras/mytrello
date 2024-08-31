@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/taskTitleInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Название задачи" />
+
+    <EditText
+        android:id="@+id/subtaskInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskTitleInput"
+        android:layout_marginTop="16dp"
+        android:hint="Шаг" />
+
+    <Button
+        android:id="@+id/addSubtaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtaskInput"
+        android:layout_marginTop="8dp"
+        android:text="Добавить шаг" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subtasksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/addSubtaskButton"
+        android:layout_marginTop="16dp"
+        android:layout_above="@id/saveTaskButton"
+        android:nestedScrollingEnabled="false"/>
+
+    <Button
+        android:id="@+id/saveTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Сохранить задачу" />
+
+    <Button
+        android:id="@+id/deleteTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        android:text="Удалить задачу" />
+</RelativeLayout>
